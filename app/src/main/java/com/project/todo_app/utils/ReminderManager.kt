@@ -4,7 +4,6 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import com.project.todo_app.model.Todo
 
 class ReminderManager(private val context: Context? = null) {
@@ -31,8 +30,7 @@ class ReminderManager(private val context: Context? = null) {
                     reminderTime,
                     pendingIntent
                 )
-            } catch (e: SecurityException) {
-                // Handle case where SCHEDULE_EXACT_ALARM permission is denied
+            } catch (_: SecurityException) {
                 alarmManager.set(
                     AlarmManager.RTC_WAKEUP,
                     reminderTime,

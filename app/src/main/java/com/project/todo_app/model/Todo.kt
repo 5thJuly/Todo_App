@@ -11,7 +11,9 @@ data class Todo(
     val category: Category = Category.PERSONAL,
     val reminderTime: Long? = null,
     val tags: List<String> = emptyList()
-)
+) {
+    constructor() : this("", "", "", false, 0L, "", Priority.MEDIUM, Category.PERSONAL, null, emptyList())
+}
 
 enum class Priority(val displayName: String, val color: Long) {
     LOW("Thấp", 0xFF4CAF50),      // Green

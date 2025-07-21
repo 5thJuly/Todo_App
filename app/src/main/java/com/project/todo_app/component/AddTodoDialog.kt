@@ -41,7 +41,7 @@ fun AddTodoDialog(
                     .verticalScroll(rememberScrollState())
             ) {
                 Text(
-                    text = "Thêm nhiệm vụ mới",
+                    text = "Thêm Task mới",
                     style = MaterialTheme.typography.headlineSmall
                 )
                 
@@ -51,7 +51,7 @@ fun AddTodoDialog(
                 OutlinedTextField(
                     value = title,
                     onValueChange = { title = it },
-                    label = { Text("Tiêu đề *") },
+                    label = { Text("Title *") },
                     modifier = Modifier.fillMaxWidth(),
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(
@@ -62,7 +62,6 @@ fun AddTodoDialog(
                 
                 Spacer(Modifier.height(12.dp))
                 
-                // Description
                 OutlinedTextField(
                     value = description,
                     onValueChange = { description = it },
@@ -102,7 +101,6 @@ fun AddTodoDialog(
                 
                 Spacer(Modifier.height(16.dp))
                 
-                // Category Selection
                 Text(
                     text = "Danh mục",
                     style = MaterialTheme.typography.labelLarge

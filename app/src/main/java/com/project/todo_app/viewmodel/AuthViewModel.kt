@@ -21,10 +21,8 @@ class AuthViewModel : ViewModel() {
     val errorMessage: StateFlow<String?> = _errorMessage
 
     init {
-        // Check if user is already signed in
         _isAuthenticated.value = repository.getCurrentUser() != null
 
-        // Listen to auth state changes
         FirebaseAuth.getInstance().addAuthStateListener { auth ->
             _isAuthenticated.value = auth.currentUser != null
         }

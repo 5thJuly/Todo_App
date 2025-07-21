@@ -1,4 +1,4 @@
-package com.project.todo_app.model
+package com.project.todo_app.viewmodel
 
 import android.app.Application
 import android.content.Context

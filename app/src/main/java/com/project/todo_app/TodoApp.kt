@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.project.todo_app.model.ThemeViewModel
+import com.project.todo_app.viewmodel.ThemeViewModel
 import com.project.todo_app.screen.AuthScreen
 import com.project.todo_app.screen.TodoScreen
 import com.project.todo_app.viewmodel.AuthViewModel
@@ -21,7 +21,7 @@ fun TodoApp() {
     if (isAuthenticated) {
         TodoScreen(
             todoViewModel = todoViewModel,
-themeViewModel = themeViewModel,
+            themeViewModel = themeViewModel,
             onLogout = { authViewModel.logout() }
         )
     } else {

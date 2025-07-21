@@ -7,7 +7,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ExitToApp
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Analytics
-import androidx.compose.material.icons.filled.ExitToApp
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material3.*
@@ -22,7 +21,7 @@ import com.project.todo_app.component.QuickStatsCard
 import com.project.todo_app.component.StatsDialog
 import com.project.todo_app.component.ThemeDialog
 import com.project.todo_app.component.TodoItem
-import com.project.todo_app.model.ThemeViewModel
+import com.project.todo_app.viewmodel.ThemeViewModel
 
 import com.project.todo_app.viewmodel.TodoViewModel
 
@@ -105,7 +104,6 @@ fun TodoScreen(
                 .fillMaxSize()
                 .padding(paddingValues)
         ) {
-            // Filter Section
             if (showFilters) {
                 FilterSection(
                     selectedCategory = selectedCategory,
@@ -126,7 +124,6 @@ fun TodoScreen(
                 modifier = Modifier.padding(16.dp)
             )
             
-            // Todo List
             if (isLoading) {
                 Box(
                     modifier = Modifier.fillMaxWidth(),
